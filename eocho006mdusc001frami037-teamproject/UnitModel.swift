@@ -11,18 +11,17 @@ import UIKit
 class UnitModel {
     
     let building: String
-    let number : Int
+    let number : String
     var status : Bool
-    var finishBy : Date
-    var finishedAt : Date?
+    var finishBy : String?
+    var finishedAt : String?
     var comments : String?
     var image : UIImage?
     
-    init(building: String, number: Int, status: Bool, finishBy: Date, finishedAt: Date){
+    init(building: String, number: String, status: Bool, finishBy: String){
         self.building = building
         self.number = number
         self.status = status
         self.finishBy = finishBy
-        self.finishedAt = finishedAt
     }
 }
