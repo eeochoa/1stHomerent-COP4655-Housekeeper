@@ -8,33 +8,48 @@
 
 import UIKit
 
+class customCell : UITableViewCell {
+    @IBOutlet weak var unitNumberLabel: UILabel!
+    @IBOutlet weak var finishByDateLabel: UILabel!
+    @IBOutlet weak var finishByHourLabel: UILabel!
+}
+
 class ToDoUnitsViewController : UITableViewController{
     
-    let houseKeepers = HouseKeepers.sharedInstance //Singleton
+
+    
+    let housekeeperSharedInstance = HouseKeepers.sharedInstance //Singleton
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return housekeeperSharedInstance.housekeepers.count //sections
+    }
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int{
-        return houseKeepers.housekeepers.count
+        return housekeeperSharedInstance.housekeepers[section].units.count //rows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UIToDoTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UIToDoTableViewCell", for: indexPath) as! customCell
         
-        let contact = houseKeepers.housekeepers[indexPath.row]
+        let apt = housekeeperSharedInstance.housekeepers[0].units[indexPath.row]
         
-        cell.textLabel?.text = "Apt " + houseKeepers.housekeepers[0].units[0].number + "     " + houseKeepers.housekeepers[0].units[0].finishBy! 
+            cell.unitNumberLabel.text = apt.number
+            cell.finishByDateLabel.text = apt.finishByDate
+            cell.finishByHourLabel.text = apt.finishByHour
         
+        
+            
+            cell.accessoryType = .disclosureIndicator //adds arrow by end of cell
+        
+       
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //get height of the status bar
-        let statBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
+        tableView.contentInset.top = 40 //Pads listview from top tab bar
     }
 }

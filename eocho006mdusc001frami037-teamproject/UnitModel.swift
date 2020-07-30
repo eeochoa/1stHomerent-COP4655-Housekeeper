@@ -13,15 +13,17 @@ class UnitModel {
     let building: String
     let number : String
     var status : Bool
-    var finishBy : String?
+    var finishByHour : String
+    var finishByDate : String
     var finishedAt : String?
     var comments : String?
     var image : UIImage?
     
-    init(building: String, number: String, status: Bool, finishBy: String){
+    init(building: String, number: String, status: Bool, finishByDate: String, finishByHour: String){
         self.building = building
         self.number = number
         self.status = status
-        self.finishBy = finishBy
+        self.finishByDate = finishByDate
+        self.finishByHour = finishByHour
     }
 }

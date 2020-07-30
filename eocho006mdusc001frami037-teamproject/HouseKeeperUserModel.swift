@@ -34,9 +34,9 @@ class HouseKeepers {
     init(){
         housekeepers = [HouseKeeperUserModel]()
         housekeepers.append(HouseKeeperUserModel(firstName: "Jane", lastName: "Doe", empID: 1111, password: "JaneDoe1111"))
-        housekeepers[0].units.append(UnitModel(building: "The W", number: "101A", status: false, finishBy: "08/01/2020    11:00 AM"))
-        housekeepers[0].units.append(UnitModel(building: "The W", number: "202A", status: false, finishBy: "08/01/2020    01:00 PM"))
-        housekeepers[0].units.append(UnitModel(building: "The W", number: "204B", status: false, finishBy: "08/01/2020    02:30 PM"))
-        housekeepers[0].units.append(UnitModel(building: "The W", number: "301A", status: false, finishBy: "08/01/2020    04:00 PM"))
+        housekeepers[0].units.append(UnitModel(building: "The W", number: "101A", status: false, finishByDate: "08/01/2020", finishByHour: "11:00 AM"))
+        housekeepers[0].units.append(UnitModel(building: "The W", number: "202A", status: false, finishByDate: "08/01/2020", finishByHour: "01:00 PM"))
+        housekeepers[0].units.append(UnitModel(building: "The W", number: "204B", status: false, finishByDate: "08/01/2020 ", finishByHour: "02:30 PM"))
+        housekeepers[0].units.append(UnitModel(building: "The W", number: "301A", status: false, finishByDate: "08/01/2020", finishByHour: "04:00 PM"))
     }
 }

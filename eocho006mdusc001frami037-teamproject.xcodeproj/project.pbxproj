@@ -16,6 +16,7 @@
 		940F182724C2CCF30061F9DF /* HouseKeeperUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F182624C2CCF30061F9DF /* HouseKeeperUserModel.swift */; };
 		940F182924C2CD0F0061F9DF /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F182824C2CD0F0061F9DF /* UnitModel.swift */; };
 		940F182B24C2D40F0061F9DF /* UnitsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F182A24C2D40F0061F9DF /* UnitsTabViewController.swift */; };
+		94AF024524D2C863004AEA38 /* AddCommentsToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF024424D2C863004AEA38 /* AddCommentsToDoViewController.swift */; };
 		94E24F9024CFF37A002FF426 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E24F8F24CFF37A002FF426 /* HomeViewController.swift */; };
 		94F696F924D1436C0061BBD4 /* ToDoUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F696F824D1436C0061BBD4 /* ToDoUnitsViewController.swift */; };
 		94F696FB24D1463B0061BBD4 /* DoneUnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F696FA24D1463B0061BBD4 /* DoneUnitsViewController.swift */; };
@@ -54,6 +55,7 @@
 		940F182624C2CCF30061F9DF /* HouseKeeperUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseKeeperUserModel.swift; sourceTree = "<group>"; };
 		940F182824C2CD0F0061F9DF /* UnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
 		940F182A24C2D40F0061F9DF /* UnitsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsTabViewController.swift; sourceTree = "<group>"; };
+		94AF024424D2C863004AEA38 /* AddCommentsToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsToDoViewController.swift; sourceTree = "<group>"; };
 		94E24F8F24CFF37A002FF426 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94F696F824D1436C0061BBD4 /* ToDoUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUnitsViewController.swift; sourceTree = "<group>"; };
 		94F696FA24D1463B0061BBD4 /* DoneUnitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneUnitsViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				940F182824C2CD0F0061F9DF /* UnitModel.swift */,
 				940F17F824BE257C0061F9DF /* AppDelegate.swift */,
 				940F17FC24BE257C0061F9DF /* Main.storyboard */,
+				94AF024424D2C863004AEA38 /* AddCommentsToDoViewController.swift */,
 				940F17FF24BE257F0061F9DF /* Assets.xcassets */,
 				940F180124BE257F0061F9DF /* LaunchScreen.storyboard */,
 				940F180424BE257F0061F9DF /* Info.plist */,
@@ -273,6 +276,7 @@
 			files = (
 				94F696FB24D1463B0061BBD4 /* DoneUnitsViewController.swift in Sources */,
 				94E24F9024CFF37A002FF426 /* HomeViewController.swift in Sources */,
+				94AF024524D2C863004AEA38 /* AddCommentsToDoViewController.swift in Sources */,
 				940F17F924BE257C0061F9DF /* AppDelegate.swift in Sources */,
 				94F696F924D1436C0061BBD4 /* ToDoUnitsViewController.swift in Sources */,
 				940F182724C2CCF30061F9DF /* HouseKeeperUserModel.swift in Sources */,
