@@ -1,10 +1,14 @@
-//
-//  ToDoUnitsViewController.swift
-//  eocho006mdusc001frami037-teamproject
-//
-//  Created by Rosybel on 29/07/2020.
-//  Copyright © 2020 Ernesto Ochoa. All rights reserved.
-//
+//  PROGRAMMER: Ernesto Ochoa
+
+//  PANTHERID: 4690718
+
+//  CLASS: COP 465501
+
+//  INSTRUCTOR: Steve Luis RVC
+
+//  ASSIGNMENT: Team A (Ernesto Ochoa) - Deliverable 2
+
+//  DUE: Saturday 08/01/2020
 
 import UIKit
 
@@ -18,7 +22,8 @@ class ToDoUnitsViewController : UITableViewController{
     
 
     
-    let housekeeperSharedInstance = HouseKeepers.sharedInstance //Singleton
+    let housekeeperSharedInstance = HouseKeepers.sharedInstance //Housekeepers Singleton
+    var cellHeights = [IndexPath: CGFloat]()
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -38,18 +43,33 @@ class ToDoUnitsViewController : UITableViewController{
             cell.unitNumberLabel.text = apt.number
             cell.finishByDateLabel.text = apt.finishByDate
             cell.finishByHourLabel.text = apt.finishByHour
-        
-        
             
             cell.accessoryType = .disclosureIndicator //adds arrow by end of cell
         
-       
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let unit = housekeeperSharedInstance.housekeepers[0].units[indexPath.row]
+        performSegue(withIdentifier: "toDoDetailView", sender: unit)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDoDetailView" {
+            // initialize new view controller and cast it as your view controller
+            let destViewController = segue.destination as! ToDoUnitsDetailViewController
+            destViewController.unit = sender as? UnitModel
+            
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.contentInset.top = 40 //Pads listview from top tab bar
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 }

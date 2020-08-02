@@ -1,10 +1,14 @@
-//
-//  HouseKeeperUserModel.swift
-//  eocho006mdusc001frami037-teamproject
-//
-//  Created by Rosybel on 18/07/2020.
-//  Copyright © 2020 Ernesto Ochoa. All rights reserved.
-//
+//  PROGRAMMER: Ernesto Ochoa
+
+//  PANTHERID: 4690718
+
+//  CLASS: COP 465501
+
+//  INSTRUCTOR: Steve Luis RVC
+
+//  ASSIGNMENT: Team A (Ernesto Ochoa) - Deliverable 2
+
+//  DUE: Saturday 08/01/2020
 
 
 class HouseKeeperUserModel {
